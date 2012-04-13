@@ -1,6 +1,6 @@
 # Letterpress [![Build Status](http://travis-ci.org/unders/letterpress.png)](http://travis-ci.org/unders/letterpress)
 
-Letterpress is a _lightweight_ model generator that replace fixture files.
+Letterpress is a _lightweight_ model generator that replaces fixture files.
 
 
 ## Installation
