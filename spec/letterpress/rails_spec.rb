@@ -2,7 +2,7 @@
 
 require 'rails/railtie'
 require 'active_record'
-require 'letter_press/rails'
+require 'letterpress/rails'
 require 'minitest_helper'
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3",
@@ -46,13 +46,13 @@ module Foo
 end
 
 # blueprint.rb
-module LetterPress
+module Letterpress
   class Author < Blueprint(ProxyMethods)
     default do
       name { "Anders" }
     end
 
-    class User < LetterPress::Blueprint(ProxyMethods)
+    class User < Letterpress::Blueprint(ProxyMethods)
       default do
         name { "Anders is the user" }
       end
@@ -68,7 +68,7 @@ module LetterPress
   end
 
   module Foo
-    class Bar < LetterPress::Blueprint(ProxyMethods)
+    class Bar < Letterpress::Blueprint(ProxyMethods)
       default do
         name { 'I am Foo::Bar' }
       end
@@ -79,7 +79,7 @@ end
 describe "ProxyMethods" do
   describe ".make" do
     it "returns a proxy object" do
-      Post.make.must_be_instance_of(LetterPress::Post)
+      Post.make.must_be_instance_of(Letterpress::Post)
     end
   end
 

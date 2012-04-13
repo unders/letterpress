@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'minitest_helper'
 
-module LetterPress
+module Letterpress
   class Blog < Blueprint
     default do
       writer { Writer.make.save }
@@ -22,7 +22,7 @@ module LetterPress
 end
 
 class Blog
-  extend LetterPress
+  extend Letterpress
   attr_accessor :writer
   attr_accessor :body
   attr_accessor :url
@@ -31,20 +31,20 @@ class Blog
 end
 
 class Writer
-  extend LetterPress
+  extend Letterpress
   attr_accessor :name
   def save; self; end
 end
 
-describe LetterPress do
-  describe  "when extending a class with the LetterPress module" do
+describe Letterpress do
+  describe  "when extending a class with the Letterpress module" do
     it "adds a .make method" do
-      Blog.make.must_be_instance_of(LetterPress::Blog)
+      Blog.make.must_be_instance_of(Letterpress::Blog)
     end
 
     describe ".make" do
       it "creates a blueprint proxy object" do
-        Blog.make.must_be_instance_of(LetterPress::Blog)
+        Blog.make.must_be_instance_of(Letterpress::Blog)
       end
     end
 

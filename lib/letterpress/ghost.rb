@@ -1,4 +1,4 @@
-module LetterPress
+module Letterpress
   class Ghost
     def initialize(serial_number)
       @serial_number = serial_number

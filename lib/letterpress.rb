@@ -1,8 +1,8 @@
 # encoding: utf-8
-require "letter_press/version"
-require "letter_press/blueprint"
+require "letterpress/version"
+require "letterpress/blueprint"
 
-module LetterPress
+module Letterpress
   def self.Blueprint(jayz_module)
     Class.new(Blueprint) do
       include jayz_module
@@ -10,7 +10,7 @@ module LetterPress
   end
 
   def make(*args)
-    name.split('::').inject(LetterPress) do |klass_level, name|
+    name.split('::').inject(Letterpress) do |klass_level, name|
       klass_level.const_get(name)
     end.make(*args)
   end

@@ -1,9 +1,9 @@
 require 'minitest_helper'
 
-describe LetterPress::Ghost do
+describe Letterpress::Ghost do
   before do
     def Object.next; 1; end
-    @ghost = LetterPress::Ghost.new(Object)
+    @ghost = Letterpress::Ghost.new(Object)
   end
 
   describe "#keys" do

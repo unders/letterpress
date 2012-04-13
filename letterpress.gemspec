@@ -1,24 +1,24 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/letter_press/version', __FILE__)
+require File.expand_path('../lib/letterpress/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Anders Törnqvist"]
   gem.email         = ["anders.tornqvist@gmail.com"]
   gem.description   = %q{A model factory}
   gem.summary       = %q{A model factory. Say no to fixtures.}
-  gem.homepage      = "https://github.com/unders/letter_press"
+  gem.homepage      = "https://github.com/unders/letterpress"
 
   gem.files         = Dir.glob("{bin,lib,spec}/**/*") + %w[.gemtest
                                                            Gemfile
                                                            LICENSE
                                                            README.md
                                                            Rakefile
-                                                           letter_press.gemspec]
+                                                           letterpress.gemspec]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "letter_press"
+  gem.name          = "letterpress"
   gem.require_paths = ["lib"]
-  gem.version       = LetterPress::VERSION
+  gem.version       = Letterpress::VERSION
 
   gem.add_development_dependency "activerecord", "~> 3.1"
   gem.add_development_dependency "railties", "~> 3.1"

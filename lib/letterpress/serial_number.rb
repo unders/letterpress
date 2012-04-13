@@ -1,4 +1,4 @@
-module LetterPress
+module Letterpress
   class SerialNumber
     def next
       @next ||=0

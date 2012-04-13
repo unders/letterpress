@@ -1,5 +1,5 @@
 # endcoding: utf-8
-module LetterPress
+module Letterpress
   # Add your blueprints here.
   #
   # e.g.

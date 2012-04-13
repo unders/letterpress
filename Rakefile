@@ -12,7 +12,7 @@ end
 task :test => :spec
 task :default => :test
 
-desc  "open console (require 'letter_press')"
+desc  "open console (require 'letterpress')"
 task :c do
-  system "irb -I lib -r letter_press"
+  system "irb -I lib -r letterpress"
 end

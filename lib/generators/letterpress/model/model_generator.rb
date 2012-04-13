@@ -1,4 +1,4 @@
-module LetterPress
+module Letterpress
   module Generators
     class ModelGenerator < Rails::Generators::NamedBase
       argument :attributes, :type => :array, :default => [], :banner => "field:type field:type"

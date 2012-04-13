@@ -1,4 +1,4 @@
-module LetterPress
+module Letterpress
   class Railtie < Rails::Railtie
     config.after_initialize do
       blueprints = [ File.join(Rails.root, 'test', 'blueprint'),

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in letter_press.gemspec
+# Specify your gem's dependencies in letterpress.gemspec
 gemspec

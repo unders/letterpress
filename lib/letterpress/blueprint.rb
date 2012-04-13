@@ -1,7 +1,7 @@
-require 'letter_press/serial_number'
-require 'letter_press/ghost'
+require 'letterpress/serial_number'
+require 'letterpress/ghost'
 
-module LetterPress
+module Letterpress
   class Blueprint; end
 
   class << Blueprint
@@ -56,7 +56,7 @@ module LetterPress
     def initialize(*args)
       symbol = args.first.is_a?(Symbol) ? args.first : :default
       options = args.last.is_a?(Hash) ? args.pop : {}
-      klass_names = self.class.name.sub('LetterPress::', '').split('::')
+      klass_names = self.class.name.sub('Letterpress::', '').split('::')
       @object = klass_names.inject(Kernel) do |klass_level, name|
         klass_level.const_get(name)
       end.new

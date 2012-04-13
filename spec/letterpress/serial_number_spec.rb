@@ -1,7 +1,7 @@
 require 'minitest_helper'
-describe LetterPress::SerialNumber do
+describe Letterpress::SerialNumber do
   before do
-    @serial_number = LetterPress::SerialNumber.new
+    @serial_number = Letterpress::SerialNumber.new
   end
 
   describe "#next" do

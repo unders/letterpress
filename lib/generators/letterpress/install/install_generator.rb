@@ -1,10 +1,10 @@
-module LetterPress
+module Letterpress
   module Generators
     class InstallGenerator < Rails::Generators::Base
       source_root File.expand_path('../templates', __FILE__)
 
       class_option :test_framework, :type => :string, :aliases => "-t",
-                                    :desc => "Test framework to use LetterPress with"
+                                    :desc => "Test framework to use Letterpress with"
 
       def blueprints_file
         if rspec?
