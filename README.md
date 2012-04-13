@@ -20,6 +20,24 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+Compatibility
+-------------
+
+Ruby version 1.9.2 and 1.9.3 and Rails version 3.1
+
+[GemTesters](http://test.rubygems.org/gems/letterpress) has
+ more information on which platforms the Letterpress tested.
+ 
+
+Test
+-------------------------
+
+    gem install rubygems-test
+    gem test jay_z
+
+
+For more info see: [GemTesters](http://test.rubygems.org/)
+
 ## Contributing
 
 1. Fork it
