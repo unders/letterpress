@@ -1,6 +1,7 @@
 # Letterpress [![Build Status](http://travis-ci.org/unders/letterpress.png)](http://travis-ci.org/unders/letterpress)
 
-TODO: Write a gem description
+Letterpress is a _lightweight_ model generator that replaces fixture files.
+
 
 ## Installation
 
@@ -19,6 +20,7 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
 
 Compatibility
 -------------
