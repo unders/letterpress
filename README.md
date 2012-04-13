@@ -24,9 +24,11 @@ Or install it yourself as:
 
 1. Update Gemfile
 
-        group :development, :test do
-          gem 'letterpress', :require => 'letterpress/rails'
-        end
+    ``` ruby
+    group :development, :test do
+      gem 'letterpress', :require => 'letterpress/rails'
+    end
+    ```
 
 2. Install the gem
 
@@ -34,13 +36,17 @@ Or install it yourself as:
 
 3. Generate (test|spec)/blueprint.rb file
 
+
         $ rails generate letterpress:install
+        
 
 4. Update config/application.rb
 
-        config.generators do |g|
-          g.test_framework :mini_test, :spec => true, :fixture_replacement => :letterpress
-        end
+    ``` ruby
+    config.generators do |g|
+      g.test_framework :mini_test, :spec => true, :fixture_replacement => :letterpress
+    end
+    ```
 
 5. Generate a model object with its factory
 
@@ -48,36 +54,41 @@ Or install it yourself as:
 
 6. It adds to the end of file (test|spec)/blueprint.rb
 
-        class Comment < Blueprint(ProxyMethods)
-          default do
-            post_id { 1 }
-            body { "MyText" }
-          end
-        end
+    ``` ruby
+    class Comment < Blueprint(ProxyMethods)
+      default do
+        post_id { 1 }
+        body { "MyText" }
+      end
+    end
+    ```
 
 7. Modify the generated blueprint according to your preferences
 
-        class Comment < Blueprint(ProxyMethods)
-          default do
-            post { Post.make.new }
-            body { "MyText" }
-          end
-        end
+    ``` ruby
+    class Comment < Blueprint(ProxyMethods)
+      default do
+        post { Post.make.new }
+        body { "MyText" }
+      end
+    end
+    ```
 
 8. Write tests in test/comment_test.rb
 
-        require "minitest_helper"
+    ``` ruby
+    require "minitest_helper"
 
-        class CommentTest < MiniTest::Rails::Model
-          before do
-            @comment = Comment.make.new
-          end
+    class CommentTest < MiniTest::Rails::Model
+      before do
+        @comment = Comment.make.new
+      end
 
-          it "must be valid" do
-            @comment.valid?.must_equal true
-          end
-        end
-
+      it "must be valid" do
+        @comment.valid?.must_equal true
+      end
+    end
+    ```
 
 
 Compatibility
