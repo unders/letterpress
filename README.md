@@ -26,7 +26,7 @@ Compatibility
 Ruby version 1.9.2 and 1.9.3 and Rails version 3.1
 
 [GemTesters](http://test.rubygems.org/gems/letterpress) has
- more information on which platforms the Letterpress tested.
+ more information on which platforms the Letterpress is tested.
  
 
 Test
