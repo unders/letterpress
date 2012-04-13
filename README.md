@@ -1,4 +1,4 @@
-# Letterpress
+# Letterpress [![Build Status](http://travis-ci.org/unders/letterpress.png)](http://travis-ci.org/unders/letterpress)
 
 TODO: Write a gem description
 
