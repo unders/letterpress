@@ -46,6 +46,7 @@ Where
 * [Letterpress @ GemTesters](http://test.rubygems.org/gems/letterpress)
 * [Letetrpress @ Rubygems](http://rubygems.org/gems/letterpress)
 * [Letterpress @ Rubydoc](http://rubydoc.info/gems/letterpress)
+* [Letterpress @ Travis](http://travis-ci.org/#!/unders/letterpress)
 
 ## Contributing
 
