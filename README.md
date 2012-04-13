@@ -35,7 +35,7 @@ Test
 -------------------------
 
     gem install rubygems-test
-    gem test jay_z
+    gem test letterpress
 
 
 For more info see: [GemTesters](http://test.rubygems.org/)
