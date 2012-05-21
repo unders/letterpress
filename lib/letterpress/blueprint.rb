@@ -33,7 +33,7 @@ module Letterpress
         end
 
         default = ghosts.fetch(:default, {})
-        (default.keys - blueprint_keys).each do |key|
+        (default.keys - blueprint_keys - options.keys).each do |key|
           hash[key] = default.send(key)
         end
 
