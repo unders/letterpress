@@ -91,8 +91,6 @@ Or install it yourself as:
     ```
 
 
-## API
-
 ## Defining Blueprints
 A blueprint for a model is defined inside the Letterpress module; the class name of the blueprint
 __must__ be the same as the models class name. Each blueprint class can inherit from
