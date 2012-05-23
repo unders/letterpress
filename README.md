@@ -116,8 +116,8 @@ module Letterpress
   end
 end
 
-user = User.make
-user.admin # => false
+user = User.make # => returns a proxy object (an instance of Letterpress::User)
+user.admin # => false # => delegates messages to an instance of the User class
 user.email # => "user@example.com"
 
 user = User.make(:admin)
@@ -155,8 +155,7 @@ to each ActiveRecord class; When `make` is called on an ActiveRecord class, it r
 that will [delegate](https://github.com/unders/letterpress/blob/master/lib/letterpress/blueprint.rb#L73) 
 its received messages to the ActiveRecord instance.
 
-
-[The proxy object](https://github.com/unders/letterpress/blob/master/lib/letterpress.rb#L18) implements these methods:
+The [proxy object](https://github.com/unders/letterpress/blob/master/lib/letterpress.rb#L18) implements these methods:
 * [`new`](https://github.com/unders/letterpress/blob/master/spec/letterpress/rails_spec.rb#L86) - returns the object under test or raises an exception if the object isn't valid.
 * [`new!`](https://github.com/unders/letterpress/blob/master/spec/letterpress/rails_spec.rb#L108) - returns the object under test, even if not valid.
 * [`save`](https://github.com/unders/letterpress/blob/master/spec/letterpress/rails_spec.rb#L128) - returns the persisted object under test or raises an exception if the object isn't valid.
@@ -168,9 +167,9 @@ User.make(:admin) # Returns instance of Letterpress::User
 User.make(:admin, email: "foo@bar.com") # Returns instance of Letterpress::User
 
 
-User.make.new # Returns the User instance
-User.make(:admin).save # Returns the User instance
-User.make(:admin, email: "foo@bar.com").new! # Returns the User instance
+User.make.new # Returns a new User instance
+User.make(:admin).save # Returns a persisted User instance
+User.make(:admin, email: "foo@bar.com").new! # Returns a new User instance
 ```
 
 ## Creating global ProxyMethods
