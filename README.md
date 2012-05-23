@@ -117,7 +117,7 @@ module Letterpress
 end
 
 user = User.make # => returns a proxy object (an instance of Letterpress::User)
-user.admin # => false # => delegates messages to an instance of the User class
+user.admin # => false; itdelegates to an instance of the User class
 user.email # => "user@example.com"
 
 user = User.make(:admin)
