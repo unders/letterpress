@@ -134,13 +134,34 @@ For attributes that must be unique, you can call the `sn` method within the
 attribute block to get a unique serial number for the object.
 
 ```ruby
-email { "user-#{sn}@example.com" }
+email { "user-#{sn}@example.com" } # Each email gets a unique serial number.
 
 user1 = User.make
 user2 = User.make
 
 user1.email # => "user1@example.com"
 user2.email # => "user2@example.com"
+```
+
+#### Associations
+When you create associations you don't have to persist them inside the blueprint.
+
+* has_many
+
+```ruby
+# When defining a has_many association, you define it with an array.
+# These 2 comments will only be persisted in the database when Post.make.save 
+# is called, and not when Post.make or Post.make.new is called. 
+comments { [ Comment.make.new, Comment.make.new ] }
+```
+
+* belongs_to
+
+```ruby
+# Post.make.new defines a non persisted post instance.
+# The post instance will only be saved to the database if
+# Comment.make.save is called.
+post { Post.make.new }
 ```
 
 #### What you must know to create a blueprint class:
