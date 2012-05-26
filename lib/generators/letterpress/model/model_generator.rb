@@ -6,8 +6,8 @@ module Letterpress
       def create_blueprint
         file_name = if File.exists?(File.join(Rails.root, 'test', 'blueprint.rb'))
           "test/blueprint.rb"
-        elsif File.exists?(File.join(Rails.root, 'spec', 'blueprint.rb'))
-          "spec/blueprint.rb"
+        elsif File.exists?(File.join(Rails.root, 'spec', 'support', 'blueprint.rb'))
+          "spec/support/blueprint.rb"
         else
           raise "Cannot find the blueprint file"
         end
