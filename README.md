@@ -34,19 +34,20 @@ Or install it yourself as:
 
         $ bundle install
 
-3. Generate (test|spec)/blueprint.rb file
-
-
-        $ rails generate letterpress:install
-        
-
-4. Update config/application.rb
+3. Update config/application.rb
 
     ``` ruby
     config.generators do |g|
       g.test_framework :mini_test, :spec => true, :fixture_replacement => :letterpress
     end
     ```
+
+4. Generate (test|spec)/blueprint.rb file
+
+
+        $ rails generate letterpress:install
+        
+
 
 5. Generate a model object with its factory
 
