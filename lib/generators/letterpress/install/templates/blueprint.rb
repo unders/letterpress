@@ -1,4 +1,4 @@
-# endcoding: utf-8
+# encoding: utf-8
 module Letterpress
   # Add your blueprints here.
   #
