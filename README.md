@@ -94,18 +94,17 @@ Or install it yourself as:
 ## Rspec
 Don't put the blueprint file in the support directory, if you do, the blueprint file will be required to early.
 It should be placed directly in the spec folder: `spec/blueprint.rb`
-If you do step 3 and 4. Letterpress will add the blueprint file at the right place.
+If you do as describe below, the blueprint file is placed in the right place.
 
-3. Update config/application.rb
+1. Update config/application.rb
 
 ```ruby
-ruby
-  config.generators do |g|
+config.generators do |g|
   g.test_framework :rspec, :fixture_replacement => :letterpress
 end
 ```
 
-4. Generate (test|spec)/blueprint.rb file
+2. Generate spec/blueprint.rb file
 
 ```ruby
 rails generate letterpress:install
