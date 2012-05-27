@@ -8,7 +8,7 @@ module Letterpress
 
       def blueprints_file
         if rspec?
-          copy_file "blueprint.rb", "spec/support/blueprint.rb"
+          copy_file "blueprint.rb", "spec/blueprint.rb"
         else
           copy_file "blueprint.rb", "test/blueprint.rb"
         end
